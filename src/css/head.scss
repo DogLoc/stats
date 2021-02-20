@@ -1,0 +1,31 @@
+@import "var.scss";
+
+@media screen and (max-width: 640px) {
+    .titrePrincipal {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+
+.titrePrincipal {
+    margin-top: 45px;
+    font-size: 45px;
+}
+
+
+
+.ligneRougeContainer {
+
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+
+    .ligneRouge {
+        width: 110px;
+        height: 3px;
+        border-radius: 2px;
+
+        background-color: $redline;
+    }
+}

@@ -1,0 +1,165 @@
+// color variables--------------------------------------------
+$backGen : #f6f6f6;
+$redline : #e2574c;
+$colorParaGreyLight : #797979;
+$blackColorFont : #3c3c3c;
+
+// Fonts Variables---------------------------------------------
+
+$ralBold : Raleway-Bold;
+$ralExtraBold : Raleway-ExtraBold;
+$ralExtraLight : Raleway-ExtraLight;
+$ralHeavy : Raleway-Heavy;
+$ralLight : Raleway-Light;
+$ralMedium : Raleway-Medium;
+$ralRegular : Raleway-Regular;
+$ralSemiBold : Raleway-SemiBold;
+$ralThin : Raleway-Thin;
+
+// play fair display
+$Helvetica : Helveticatkt;
+$playfairdisplay-b : playfairdisplay-b;
+$playfairdisplay-r : playfairdisplay-r;
+$playfairdisplay-i : playfairdisplay-i;
+$playfairdisplay-black : playfairdisplay-black;
+
+// fonts class -------------------------------------------------------
+
+// play fair display
+
+.playfairdisplay-b{
+    font-family: $playfairdisplay-b;
+}
+
+.playfairdisplay-r{
+    font-family: $playfairdisplay-r;
+}
+
+.playfairdisplay-i{
+    font-family: $playfairdisplay-i;
+}
+
+.playfairdisplay-black{
+    font-family: $playfairdisplay-black;
+}
+
+// ralway
+
+.ralBold{
+    font-family: $ralBold;
+}
+
+.ralExtraBold{
+    font-family: $ralExtraBold;
+}
+
+.ralExtraLight{
+    font-family: $ralExtraLight;
+}
+
+.ralHeavy{
+    font-family: $ralHeavy;
+}
+
+.ralLight{
+    font-family: $ralLight;
+}
+
+.ralMedium{
+    font-family: $ralMedium;
+}
+
+.ralRegular{
+    font-family: $ralRegular;
+}
+
+.ralSemiBold{
+    font-family: $ralSemiBold;
+}
+
+.ralThin{
+    font-family: $ralThin;
+}
+
+// helvetica
+
+.helevetica{
+    font-family : $Helvetica;
+}    
+
+//font face -------------------------------------
+
+// raleway 
+
+@font-face {
+    font-family: Raleway-Bold;
+    src: url(../fonts/Raleway-Bold.ttf)
+}
+
+@font-face {
+    font-family: Raleway-ExtraBold;
+    src: url(../fonts/Raleway-ExtraBold.ttf) 
+}
+
+@font-face {
+    font-family: Raleway-ExtraLight;
+    src: url(../fonts/Raleway-ExtraLight.ttf) 
+}
+
+@font-face {
+    font-family: Raleway-Heavy;
+    src: url(../fonts/Raleway-Heavy.ttf) 
+}
+
+@font-face {
+    font-family: Raleway-Light;
+    src: url(../fonts/Raleway-Light.ttf) 
+}
+
+@font-face {
+    font-family: Raleway-Medium;
+    src: url(../fonts/Raleway-Medium.ttf)
+}
+
+@font-face {
+    font-family: Raleway-Regular;
+    src: url(../fonts/Raleway-Regular.ttf) 
+}
+
+@font-face {
+    font-family: Raleway-SemiBold;
+    src: url(../fonts/Raleway-SemiBold.ttf) 
+}
+
+@font-face {
+    font-family: Raleway-Thin;
+    src: url(../fonts/Raleway-Thin.ttf) 
+}
+
+// play fair display
+
+@font-face{
+    font-family: playfairdisplay-b;
+    src: url(../fonts/PlayfairDisplay-Bold.ttf)
+}
+
+@font-face{
+    font-family: playfairdisplay-r;
+    src: url(../fonts/PlayfairDisplay-Regular.ttf)
+}
+
+@font-face{
+    font-family: playfairdisplay-i;
+    src: url(../fonts/PlayfairDisplay-Italic.ttf)
+}
+@font-face{
+    font-family: playfairdisplay-black;
+    src: url(../fonts/PlayfairDisplay-Black.ttf)
+}
+
+// helvetica
+
+@font-face{
+    font-family: Helveticatkt;
+    src: url(../fonts/Helvetica.ttf)
+}
