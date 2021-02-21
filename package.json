@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
+    "@varld/popover": "^0.1.0",
     "bootstrap": "^4.6.0",
     "country-list": "^2.1.1",
     "emotion": "^10.0.14",
