@@ -31,7 +31,7 @@ class Map extends React.Component {
 
   handleClick = (e, countryCode) => {
     const { countriesCodesArray } = this.state;
-    //console.log(countryCode);
+
     if (countriesCodesArray.indexOf(countryCode) === -1) {
       this.setState(
         {
@@ -40,6 +40,7 @@ class Map extends React.Component {
         () => this.getCountriesNamesList()
       );
     }
+    
   };
 
   getCountriesNamesList = () => {
@@ -68,7 +69,6 @@ class Map extends React.Component {
             () => this.makeMapDataStructure()
           );
         });
-        console.log(getName(list[list.length - 1]));
 
       })
       .catch(err => {

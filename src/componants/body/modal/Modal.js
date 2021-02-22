@@ -13,7 +13,6 @@ class Modal extends React.Component {
     };
 
     componentWillReceiveProps() {
-        console.log('dqzfz')
         this.setState({
             visible : true
         })
