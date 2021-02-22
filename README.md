@@ -1,3 +1,1 @@
-# Multiple Stats
-
-Map by https://github.com/Allegra9
+Pas très utile mais plutot stylax

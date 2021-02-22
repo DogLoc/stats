@@ -1,5 +1,58 @@
-.stats{
+.popModal {
+    &.active {
+        animation: slideTop 0.7s;
+    }
+
+    &.out {
+        animation: unSlideTop 0.3s;
+        animation-fill-mode: forwards;
+    }
+    
+    animation: slideTop 0.5s;
+    background-color: rgba(0, 0, 0, 0.925);
+    text-align: center;
+    width: 100%;
+    top: 0;
     position: absolute;
-    height: 200px;
-    width: 300px;
+    color: white;
+    z-index: 9999;
+
+    .deleteModal {
+        padding: 1%;
+        background-color: rgb(121, 0, 0);
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        border-bottom-left-radius: 10px;
+        font-weight: bold;
+    }
+    .deleteModal:hover {
+        transition: 0.6s;
+        background-color: rgb(65, 1, 1);
+    }
+}
+
+.dePopModal {
+    animation: unSlideTop 0.5s;
+}
+
+@keyframes unSlideTop {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -550px;
+    }
+}
+
+@keyframes slideTop {
+    from {
+        top: -150px;
+    }
+
+    to {
+        top: 0;
+    }
 }

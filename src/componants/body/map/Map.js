@@ -1,10 +1,10 @@
 import React from "react";
 import { VectorMap } from "react-jvectormap";
-import '../../../css/map.scss';
-
+import Modal from "../modal/Modal";
 import { jsx } from "@emotion/core";
 import { Popover } from '@varld/popover';
 import styled from "@emotion/styled";
+import '../../../css/map.scss';
 
 const { getName } = require("country-list");
 
@@ -16,7 +16,12 @@ class Map extends React.Component {
     dataCovid: {},
     title: "",
     titleSet: false,
-    color: "#48aeef"
+    color: "#48aeef",
+    popup: {
+      isGood: false,
+      for: ""
+    },
+
   };
 
   handleColorChange = color => {
@@ -39,9 +44,8 @@ class Map extends React.Component {
 
   getCountriesNamesList = () => {
     const { countriesCodesArray } = this.state;
-    const list = countriesCodesArray.map(code =>
-      
-      fetch(`https://coronavirus-map.p.rapidapi.com/v1/summary/region?region=${getName(code)}`, {
+    const list = countriesCodesArray;
+    fetch(`https://coronavirus-map.p.rapidapi.com/v1/summary/region?region=${getName(list[list.length - 1])}`, {
       "method": "GET",
       "headers": {
         "x-rapidapi-key": "9ad6965570msh263b6eabf12b69fp1ae439jsn82a313ffee62",
@@ -50,22 +54,27 @@ class Map extends React.Component {
     })
       .then(response => {
         const promiseCovid = response.json(Promise.resolve());
-
         promiseCovid.then((value) => {
           const dataCovid = value.data.summary;
           this.setState({
             isLoaded: true,
             dataCovid: dataCovid,
-            countriesNamesArray: list 
+            countriesNamesArray: list,
+            popup: {
+              isGood: true,
+              for: getName(list[list.length - 1])
+            }
           },
-          () => this.makeMapDataStructure()
+            () => this.makeMapDataStructure()
           );
         });
+        console.log(getName(list[list.length - 1]));
+
       })
       .catch(err => {
         console.error(err);
-      })  
-      );
+      })
+
   };
 
   makeMapDataStructure = () => {
@@ -78,13 +87,25 @@ class Map extends React.Component {
     });
   };
 
-
-
-
   render() {
-    const { countriesNamesArray, data, dataCovid, color } = this.state;
+
+    const { countriesNamesArray, data, dataCovid, color, popup } = this.state;
+
     return (
       <div>
+
+        {popup.isGood ? <Modal
+          country={popup.for}
+          deaths={dataCovid.deaths}
+          tested={dataCovid.tested}
+          active_cases={dataCovid.active_cases}
+          critical={dataCovid.critical}
+          death_ratio={dataCovid.death_ratio}
+          recovered={dataCovid.recovered}
+          recovery_ratio={dataCovid.recovery_ratio}
+          total_cases={dataCovid.total_cases}
+        /> : ""}
+
         <VectorMap
           map={"world_mill"}
           backgroundColor="transparent" // change it to ocean blue: #0077be
