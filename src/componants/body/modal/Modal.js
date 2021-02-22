@@ -31,8 +31,8 @@ class Modal extends React.Component {
                     <p>Critical : {this.props.critical}</p>
                     <p>Death ratio : {this.props.death_ratio}</p>
                     <p>Recovered : {this.props.recovered}</p>
-                    <p>Recovery_ratio : {this.props.recovery_ratio}</p>
-                    <p>Total_cases : {this.props.total_cases}</p>
+                    <p>Recovery ratio : {this.props.recovery_ratio}</p>
+                    <p>Total cases : {this.props.total_cases}</p>
 
                 </div>
 
